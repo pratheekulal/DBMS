@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Product Image</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="signin.html">Sign In</a>
+        <a href="review.html">Review</a>
+        <a href="upload.html">Upload</a>
+    </nav>
+    <main>
+        <h1>Upload Product Image</h1>
+        <form action="functions.php" method="post" enctype="multipart/form-data">
+            <label for="product">Product:</label>
+            <select id="product" name="product">
+                <!-- Options will be dynamically loaded from the database -->
+            </select>
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" required>
+            <button type="submit" name="upload">Upload</button>
+        </form>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

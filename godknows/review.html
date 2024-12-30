@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="signin.html">Sign In</a>
+        <a href="review.html">Review</a>
+        <a href="upload.html">Upload</a>
+    </nav>
+    <main>
+        <h1>Review a Product</h1>
+        <form action="functions.php" method="post" enctype="multipart/form-data">
+            <label for="product">Product:</label>
+            <select id="product" name="product">
+                <!-- Options will be dynamically loaded from the database -->
+            </select>
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+            <label for="text">Review:</label>
+            <textarea id="text" name="text" required></textarea>
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image">
+            <button type="submit" name="review">Submit Review</button>
+        </form>
+
+        <h2>Reviews</h2>
+        <div id="reviews">
+            <!-- Reviews will be dynamically loaded from the database -->
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
